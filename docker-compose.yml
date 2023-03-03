@@ -28,15 +28,15 @@ services:
     depends_on: 
       - rabbitmq
 
-  publisher:
-    build: ./publisher
+  producer:
+    build: ./producer
     entrypoint: ./.docker/entrypoint.sh
-    container_name: nodejs-rabbitmq-publisher
+    container_name: nodejs-rabbitmq-producer
     environment:
       - CHOKIDAR_USEPOLLING=true
     ports:
       - 3000:3000
     volumes:
-      - ./publisher:/home/node/publisher
+      - ./producer:/home/node/producer
     depends_on: 
       - rabbitmq

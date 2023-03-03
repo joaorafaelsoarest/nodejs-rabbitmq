@@ -12,5 +12,5 @@ app.use('/', indexRouter);
 
 
 app.listen(port, () => {
-    console.log(`-------------------Publisher ON-------------------`)
+    console.log(`-------------------Producer ON-------------------`)
   })
